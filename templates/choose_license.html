@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Choose a License for Your Work{% endblock %}
+
+{% block content %}
+
+<section style="background: #fff; min-height: 100vh; padding: 60px 0;">
+
+  <div class="container" style="max-width: 600px; margin: 80px auto 0 auto;">
+
+    <h1 style="font-size: 2.5rem; font-weight: 900; text-align: center; margin-bottom: 0.5rem; margin-top: 60px; color: #222; background: #fff; z-index: 2; position: relative; display: block; letter-spacing: -1px;">Choose a License for Your Work</h1>
+
+    <hr style="border: none; border-top: 2px solid #1a6fb0; width: 80%; margin: 0 auto 1.5rem auto; opacity: 0.5;">
+
+    <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.15rem;">Follow the steps to select the appropriate license for your work.<br>This site does not store any information.</p>
+
+    <form id="license-chooser-form" style="background: #f5f9fc; border-radius: 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); padding: 36px;">
+
+      <div style="margin-bottom: 1.7rem;">
+
+        <span style="font-size: 1.15rem; font-weight: 700; color: #1a6fb0;">1</span>
+
+        <label style="font-weight: 600; margin-left: 0.5em;">Do you know which license you need?</label><br>
+
+        <input type="radio" name="know_license" value="yes" id="know_yes"> <label for="know_yes">Yes</label>
+
+        <input type="radio" name="know_license" value="no" id="know_no" style="margin-left: 1.5em;"> <label for="know_no">No</label>
+
+      </div>
+
+      <div style="margin-bottom: 1.7rem;">
+
+        <span style="font-size: 1.15rem; font-weight: 700; color: #1a6fb0;">2</span>
+
+        <label style="font-weight: 600; margin-left: 0.5em;">Which license do you need?</label><br>
+
+        <select name="license" id="license-select" style="width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1.08rem;">
+
+          <option value="">—choose a license—</option>
+
+          <option value="cc0">CC0 1.0</option>
+
+          <option value="by">CC-BY 4.0</option>
+
+          <option value="by-sa">CC-BY-SA 4.0</option>
+
+          <option value="by-nd">CC-BY-ND 4.0</option>
+
+          <option value="by-nc">CC-BY-NC 4.0</option>
+
+          <option value="by-nc-sa">CC-BY-NC-SA 4.0</option>
+
+          <option value="by-nc-nd">CC-BY-NC-ND 4.0</option>
+
+        </select>
+
+      </div>
+
+      <div id="cc0-checkboxes" style="display:none; margin-bottom: 1.2rem; background: #f9f9f9; border-radius: 8px; padding: 14px 16px; border: 1px solid #ddd;">
+
+        <label style="display:block; margin-bottom: 0.5em;"><input type="checkbox" id="cc0-check1"> I hereby waive all copyright and related or neighboring rights together with all associated claims and causes of action with respect to this work to the extent possible under the law.</label>
+
+        <label style="display:block;"><input type="checkbox" id="cc0-check2"> I have read and understand the terms and intended legal effect of CC0, and hereby voluntarily elect to apply it to this work.</label>
+
+      </div>
+
+      <div id="license-description-box" style="display:none; margin-bottom: 1.7rem; background: #eaf4fb; border-radius: 8px; padding: 16px; color: #155a8a; font-size: 1rem; border: 1px solid #b3d6f2;"></div>
+
+      <div style="margin-bottom: 1.7rem;">
+
+        <span style="font-size: 1.15rem; font-weight: 700; color: #1a6fb0;">3</span>
+
+        <label style="font-weight: 600; margin-left: 0.5em;">Attribution details (optional)</label>
+
+        <p style="font-size: 1rem; color: #888; margin-bottom: 0.5em;">This helps others attribute your work to you, and fills in machine-readable code.</p>
+
+        <input type="text" name="title" placeholder="Title of work" style="width: 100%; margin-bottom: 0.5em; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1rem;">
+
+        <input type="text" name="creator" placeholder="Creator of work" style="width: 100%; margin-bottom: 0.5em; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1rem;">
+
+        <input type="url" name="work_link" placeholder="Link to work" style="width: 100%; margin-bottom: 0.5em; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1rem;">
+
+        <input type="url" name="creator_link" placeholder="Link to Creator Profile" style="width: 100%; margin-bottom: 0.5em; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1rem;">
+
+        <input type="text" name="year" placeholder="Year of creation" style="width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #bbb; font-size: 1rem;">
+
+      </div>
+
+      <div style="text-align: center; margin-top: 2.2rem;">
+
+        <button type="submit" style="background: #1a6fb0; color: #fff; font-weight: 700; font-size: 1.15rem; padding: 12px 38px; border: none; border-radius: 8px; box-shadow: 0 2px 8px rgba(26,111,176,0.08); cursor: pointer; transition: background 0.2s;">Submit</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+
+const licenseDescriptions = {
+
+'cc0': `CC0 1.0\nUniversal\nBy marking the work with a CC0 public domain dedication, the creator is giving up their copyright and allowing reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.\n\nCC0 This work has been marked as dedicated to the public domain.\n\n<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by': `CC-BY 4.0\nCreative Commons Attribution 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.\n\nBY Credit must be given to you, the creator.\n\n<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by-sa': `CC BY-SA 4.0\nCreative Commons Attribution-ShareAlike 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. If others remix, adapt, or build upon the material, they must license the modified material under identical terms.\n\nBY Credit must be given to you, the creator.\nSA Adaptations must be shared under the same terms.\n\n<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by-nd': `CC BY-ND 4.0\nCreative Commons Attribution-NoDerivatives 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to copy and distribute the material in any medium or format in unadapted form only, even for commercial purposes.\n\nBY Credit must be given to you, the creator.\nND No derivatives or adaptations of your work are permitted.\n\n<a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by-nc': `CC BY-NC 4.0\n\nCreative Commons Attribution-NonCommercial 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes only.\n\nBY Credit must be given to you, the creator.\nNC Only noncommercial use of your work is permitted. Noncommercial means not primarily intended for or directed towards commercial advantage or monetary compensation.\n\n<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by-nc-sa': `CC BY-NC-SA 4.0\n\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes only. If others modify or adapt the material, they must license the modified material under identical terms.\n\nBY Credit must be given to you, the creator.\nNC Only noncommercial use of your work is permitted. Noncommercial means not primarily intended for or directed towards commercial advantage or monetary compensation.\nSA Adaptations must be shared under the same terms.\n\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`,
+
+'by-nc-nd': `CC BY-NC-ND 4.0\n\nCreative Commons Attribution-NonCommercial-NoDerivatives 4.0 International\nThis license requires that reusers give credit to the creator. It allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only.\n\nBY Credit must be given to you, the creator.\nNC Only noncommercial use of your work is permitted. Noncommercial means not primarily intended for or directed towards commercial advantage or monetary compensation.\nND No derivatives or adaptations of your work are permitted.\n\n<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer" style="color:#1a6fb0;text-decoration:underline;">See the License Deed</a>`
+
+};
+
+const select = document.getElementById('license-select');
+
+const descBox = document.getElementById('license-description-box');
+
+const cc0Box = document.getElementById('cc0-checkboxes');
+
+const cc0Check1 = document.getElementById('cc0-check1');
+
+const cc0Check2 = document.getElementById('cc0-check2');
+
+function updateCC0() {
+
+  if (select.value === 'cc0') {
+
+    cc0Box.style.display = 'block';
+
+    if (cc0Check1.checked && cc0Check2.checked) {
+
+      descBox.style.display = 'block';
+
+      descBox.innerHTML = licenseDescriptions['cc0'];
+
+    } else {
+
+      descBox.style.display = 'none';
+
+      descBox.innerHTML = '';
+
+    }
+
+  } else {
+
+    cc0Box.style.display = 'none';
+
+    cc0Check1.checked = false;
+
+    cc0Check2.checked = false;
+
+    if (licenseDescriptions[select.value]) {
+
+      descBox.style.display = 'block';
+
+      descBox.innerHTML = licenseDescriptions[select.value];
+
+    } else {
+
+      descBox.style.display = 'none';
+
+      descBox.innerHTML = '';
+
+    }
+
+  }
+
+}
+
+select.addEventListener('change', updateCC0);
+
+cc0Check1.addEventListener('change', updateCC0);
+
+cc0Check2.addEventListener('change', updateCC0);
+
+</script>
+
+{% endblock %}
+

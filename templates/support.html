@@ -1,0 +1,408 @@
+{% extends "base.html" %}
+
+{% block title %}Support Creative Commons{% endblock %}
+
+{% block content %}
+<section class="support-hero" style="
+    background: linear-gradient(135deg,rgb(182, 203, 220) 0%, #2680c2 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+">
+    <div class="container" style="
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    ">
+        <h1 style="
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.2;
+            animation: slideInFromTop 0.8s ease-out;
+        ">SUPPORT CREATIVE COMMONS</h1>
+        <p style="
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+            animation: fadeIn 1s ease-out 0.4s forwards;
+            opacity: 0;
+        ">Our work relies on you! Help us keep the internet free and open.</p>
+    </div>
+    <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+         background-size: cover;
+        animation: wave 20s linear infinite;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>
+        
+    </div>
+</section>
+
+<section class="support-content" style="padding: 80px 0;">
+    <div class="container" style="max-width: 1000px; margin: 0 auto;">
+        <div class="support-section" style="
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out;
+        ">
+            <h2 style="
+                font-size: 2.2rem;
+                color: #2680c2;
+                margin-bottom: 1.5rem;
+                position: relative;
+                display: inline-block;
+            ">
+                <span style="
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    width: 60px;
+                    height: 4px;
+                    background: #2680c2;
+                    border-radius: 2px;
+                "></span>
+                Why Support Creative Commons?
+            </h2>
+            <p style="
+                font-size: 1.1rem;
+                color: #555;
+                line-height: 1.7;
+                margin-bottom: 1.5rem;
+            ">Creative Commons is a nonprofit organization that depends on the generous support of people like you to sustain our work. Your donation helps us:</p>
+            <ul style="
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.5rem 0;
+            ">
+                <li style="
+                    padding: 10px 0 10px 30px;
+                    position: relative;
+                    font-size: 1.1rem;
+                    color: #555;
+                    line-height: 1.6;
+                    animation: slideInFromLeft 0.6s ease-out;
+                    animation-fill-mode: backwards;
+                " style="animation-delay: 0.2s">
+                    <span style="
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        width: 20px;
+                        height: 20px;
+                        background: #2680c2;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 12px;
+                    ">✓</span>
+                    Develop and maintain our licenses and public domain tools
+                </li>
+                <li style="
+                    padding: 10px 0 10px 30px;
+                    position: relative;
+                    font-size: 1.1rem;
+                    color: #555;
+                    line-height: 1.6;
+                    animation: slideInFromLeft 0.6s ease-out;
+                    animation-fill-mode: backwards;
+                " style="animation-delay: 0.3s">
+                    <span style="
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        width: 20px;
+                        height: 20px;
+                        background: #2680c2;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 12px;
+                    ">✓</span>
+                    Support the global CC community and network
+                </li>
+                <li style="
+                    padding: 10px 0 10px 30px;
+                    position: relative;
+                    font-size: 1.1rem;
+                    color: #555;
+                    line-height: 1.6;
+                    animation: slideInFromLeft 0.6s ease-out;
+                    animation-fill-mode: backwards;
+                " style="animation-delay: 0.4s">
+                    <span style="
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        width: 20px;
+                        height: 20px;
+                        background: #2680c2;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 12px;
+                    ">✓</span>
+                    Advocate for open policies and practices
+                </li>
+                <li style="
+                    padding: 10px 0 10px 30px;
+                    position: relative;
+                    font-size: 1.1rem;
+                    color: #555;
+                    line-height: 1.6;
+                    animation: slideInFromLeft 0.6s ease-out;
+                    animation-fill-mode: backwards;
+                " style="animation-delay: 0.5s">
+                    <span style="
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        width: 20px;
+                        height: 20px;
+                        background: #2680c2;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 12px;
+                    ">✓</span>
+                    Educate the public about open licensing and the commons
+                </li>
+            </ul>
+        </div>
+        
+        <div class="donation-options" style="animation: fadeIn 1s ease-out 0.3s forwards; opacity: 0;">
+            <h2 style="
+                font-size: 2.2rem;
+                color: #2680c2;
+                margin-bottom: 2rem;
+                text-align: center;
+                position: relative;
+            ">
+                <span style="
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60px;
+                    height: 4px;
+                    background: #2680c2;
+                    border-radius: 2px;
+                "></span>
+                Ways to Give
+            </h2>
+            <div class="donation-grid" style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 30px;
+            ">
+                <div class="donation-option" style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 30px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                    text-align: center;
+                ">
+                    <h3 style="
+                        font-size: 1.8rem;
+                        color: #2680c2;
+                        margin-bottom: 1rem;
+                    ">One-Time Donation</h3>
+                    <p style="
+                        color: #555;
+                        margin-bottom: 1.5rem;
+                        line-height: 1.6;
+                    ">Make a single donation to support our work.</p>
+                    <form class="donation-form" style="margin: 0;">
+                        <select style="
+                            width: 100%;
+                            padding: 12px 20px;
+                            margin-bottom: 20px;
+                            border: 1px solid #ddd;
+                            border-radius: 50px;
+                            font-size: 1rem;
+                            appearance: none;
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                            background-repeat: no-repeat;
+                            background-position: right 20px center;
+                            background-size: 16px;
+                        ">
+                            <option value="50">$50</option>
+                            <option value="100">$100</option>
+                            <option value="250">$250</option>
+                            <option value="500">$500</option>
+                            <option value="other">Other</option>
+                        </select>
+                            <a href="https://www.classy.org/give/313412/#!/donation/checkout" style="text-decoration: none; display: block;">
+                            <button type="button" class="donate-button" style="
+                                display: inline-block;
+                                width: 100%;
+                                background: #2680c2;
+                                color: white;
+                                padding: 14px 20px;
+                                border: none;
+                                border-radius: 50px;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                            ">DONATE NOW</button>
+                            </a>
+                    </form>
+                </div>
+                <div class="donation-option" style="
+                    background: white;
+                    border-radius: 12px;
+                    padding: 30px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                    text-align: center;
+                ">
+                    <h3 style="
+                        font-size: 1.8rem;
+                        color: #2680c2;
+                        margin-bottom: 1rem;
+                    ">Monthly Donation</h3>
+                    <p style="
+                        color: #555;
+                        margin-bottom: 1.5rem;
+                        line-height: 1.6;
+                    ">Become a sustaining member with a recurring donation.</p>
+                    <form class="donation-form" style="margin: 0;">
+                        <select style="
+                            width: 100%;
+                            padding: 12px 20px;
+                            margin-bottom: 20px;
+                            border: 1px solid #ddd;
+                            border-radius: 50px;
+                            font-size: 1rem;
+                            appearance: none;
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                            background-repeat: no-repeat;
+                            background-position: right 20px center;
+                            background-size: 16px;
+                        ">
+                            <option value="10">$10/month</option>
+                            <option value="25">$25/month</option>
+                            <option value="50">$50/month</option>
+                            <option value="100">$100/month</option>
+                            <option value="other">Other</option>
+                        </select>
+                       <a href="https://www.classy.org/give/313412/#!/donation/checkout" style="text-decoration: none; display: block;">
+                            <button type="button" class="donate-button" style="
+                                display: inline-block;
+                                width: 100%;
+                                background: #2680c2;
+                                color: white;
+                                padding: 14px 20px;
+                                border: none;
+                                border-radius: 50px;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                            ">DONATE MONTHLY</button>
+                            </a>
+                              
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes slideInFromTop {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slideInFromLeft {
+        from {
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+<script>
+    // Add hover effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Donation option hover effects
+        const donationOptions = document.querySelectorAll('.donation-option');
+        donationOptions.forEach(option => {
+            const button = option.querySelector('.donate-button');
+            
+            option.addEventListener('mouseenter', () => {
+                option.style.transform = 'translateY(-10px)';
+                option.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+                button.style.background = '#1a6fb0';
+            });
+            
+            option.addEventListener('mouseleave', () => {
+                option.style.transform = 'translateY(0)';
+                option.style.boxShadow = '0 5px 20px rgba(0,0,0,0.05)';
+                button.style.background = '#2680c2';
+            });
+        });
+
+        // Button hover effects
+        const buttons = document.querySelectorAll('.donate-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,437 @@
+{% extends "base.html" %}
+
+{% block title %}About Creative Commons{% endblock %}
+
+{% block content %}
+<section class="about-hero" style="
+    background: linear-gradient(135deg,rgb(177, 207, 230) 0%,rgb(80, 129, 164) 100%);
+    color: white;
+    padding: 180px 0 220px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+">
+    <div class="container" style="
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    ">
+        <h1 style="
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            animation: textGlow 2s ease-in-out infinite alternate, 
+                       slideInFromTop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-origin: center bottom;
+        ">ABOUT CREATIVE COMMONS</h1>
+        <p style="
+            font-size: 1.4rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+            animation: fadeIn 1.8s ease-out 0.6s forwards, 
+                       floatUpDown 4s ease-in-out infinite 1.6s;
+            opacity: 0;
+            transform: translateY(30px);
+        ">Creative Commons is a global nonprofit organization that enables sharing and reuse of creativity and knowledge through the provision of free legal tools.</p>
+    </div>
+    <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>
+       </div>
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%);
+        animation: pulseRadial 6s infinite alternate;
+    "></div>
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><circle cx="50" cy="50" r="40" stroke="%23ffffff" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
+        background-size: 50px 50px;
+        opacity: 0.3;
+        animation: gridMove 40s linear infinite;
+    "></div>
+</section>
+
+<section class="about-content" style="
+    padding: 100px 0;
+    background: #f5f9fc;
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+">
+    <div class="container" style="max-width: 1000px; margin: 0 auto;">
+        <div class="about-section" style="
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            animation: floatIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform: translateY(80px) rotateX(10deg);
+            border: 1px solid rgba(38, 128, 194, 0.2);
+            position: relative;
+            overflow: hidden;
+        ">
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(38, 128, 194, 0.03) 0%, rgba(26, 111, 176, 0.03) 100%);
+                z-index: 0;
+            "></div>
+            <h2 style="
+                font-size: 2.8rem;
+                margin-bottom: 1.8rem;
+                position: relative;
+                display: inline-block;
+                background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                z-index: 1;
+                animation: textShine 3s infinite alternate;
+            ">
+                <span style="
+                    content: '';
+                    position: absolute;
+                    bottom: -12px;
+                    left: 0;
+                    width: 70px;
+                    height: 5px;
+                    background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                    border-radius: 3px;
+                    animation: underlinePulse 3s infinite alternate;
+                "></span>
+                Our Mission
+            </h2>
+            <p style="
+                font-size: 1.3rem;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 0;
+                position: relative;
+                z-index: 1;
+            ">Creative Commons helps overcome legal obstacles to the sharing of knowledge and creativity to address the world's pressing challenges.</p>
+        </div>
+        
+        <div class="about-section" style="
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            animation: floatIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s forwards;
+            opacity: 0;
+            transform: translateY(80px) rotateX(10deg);
+            border: 1px solid rgba(38, 128, 194, 0.2);
+            position: relative;
+            overflow: hidden;
+        ">
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(38, 128, 194, 0.03) 0%, rgba(26, 111, 176, 0.03) 100%);
+                z-index: 0;
+            "></div>
+            <h2 style="
+                font-size: 2.8rem;
+                margin-bottom: 1.8rem;
+                position: relative;
+                display: inline-block;
+                background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                z-index: 1;
+                animation: textShine 3s infinite alternate 0.4s;
+            ">
+                <span style="
+                    content: '';
+                    position: absolute;
+                    bottom: -12px;
+                    left: 0;
+                    width: 70px;
+                    height: 5px;
+                    background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                    border-radius: 3px;
+                    animation: underlinePulse 3s infinite alternate 0.4s;
+                "></span>
+                What We Do
+            </h2>
+            <p style="
+                font-size: 1.3rem;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 0;
+                position: relative;
+                z-index: 1;
+            ">We provide Creative Commons licenses and public domain tools that give every person and organization in the world a free, simple, and standardized way to grant copyright permissions for creative and academic works; ensure proper attribution; and allow others to copy, distribute, and make use of those works.</p>
+        </div>
+        
+        <div class="about-section" style="
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            animation: floatIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s forwards;
+            opacity: 0;
+            transform: translateY(80px) rotateX(10deg);
+            border: 1px solid rgba(38, 128, 194, 0.2);
+            position: relative;
+            overflow: hidden;
+        ">
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(38, 128, 194, 0.03) 0%, rgba(26, 111, 176, 0.03) 100%);
+                z-index: 0;
+            "></div>
+            <h2 style="
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+                position: relative;
+                display: inline-block;
+                background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                z-index: 1;
+                animation: textShine 3s infinite alternate 0.8s;
+            ">
+                <span style="
+                    content: '';
+                    position: absolute;
+                    bottom: -12px;
+                    left: 0;
+                    width: 70px;
+                    height: 5px;
+                    background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                    border-radius: 3px;
+                    animation: underlinePulse 3s infinite alternate 0.8s;
+                "></span>
+                Our Impact
+            </h2>
+            <div class="impact-stats" style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 30px;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+            ">
+                <div class="stat-item" style="
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(38, 128, 194, 0.1) 0%, rgba(26, 111, 176, 0.1) 100%);
+                    border-radius: 16px;
+                    transition: all 0.6s ease;
+                    transform-style: preserve-3d;
+                    animation: statFloat 4s ease-in-out infinite alternate;
+                    border: 1px solid rgba(38, 128, 194, 0.2);
+                    backdrop-filter: blur(4px);
+                " style="animation-delay: 1.2s">
+                    <div class="stat-number" style="
+                        font-size: 2.8rem;
+                        font-weight: 800;
+                        margin-bottom: 0.8rem;
+                        background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    ">2+ Billion</div>
+                    <div class="stat-label" style="
+                        font-size: 1.2rem;
+                        color: #555;
+                        font-weight: 600;
+                    ">CC-licensed works</div>
+                </div>
+                <div class="stat-item" style="
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(38, 128, 194, 0.1) 0%, rgba(26, 111, 176, 0.1) 100%);
+                    border-radius: 16px;
+                    transition: all 0.6s ease;
+                    transform-style: preserve-3d;
+                    animation: statFloat 4s ease-in-out infinite alternate;
+                    border: 1px solid rgba(38, 128, 194, 0.2);
+                    backdrop-filter: blur(4px);
+                " style="animation-delay: 1.4s">
+                    <div class="stat-number" style="
+                        font-size: 2.8rem;
+                        font-weight: 800;
+                        margin-bottom: 0.8rem;
+                        background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    ">100+ Countries</div>
+                    <div class="stat-label" style="
+                        font-size: 1.2rem;
+                        color: #555;
+                        font-weight: 600;
+                    ">with CC-licensed works</div>
+                </div>
+                <div class="stat-item" style="
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, rgba(38, 128, 194, 0.1) 0%, rgba(26, 111, 176, 0.1) 100%);
+                    border-radius: 16px;
+                    transition: all 0.6s ease;
+                    transform-style: preserve-3d;
+                    animation: statFloat 4s ease-in-out infinite alternate;
+                    border: 1px solid rgba(38, 128, 194, 0.2);
+                    backdrop-filter: blur(4px);
+                " style="animation-delay: 1.6s">
+                    <div class="stat-number" style="
+                        font-size: 2.8rem;
+                        font-weight: 800;
+                        margin-bottom: 0.8rem;
+                        background: linear-gradient(90deg, #2680c2, #1a6fb0);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    ">20+ Years</div>
+                    <div class="stat-label" style="
+                        font-size: 1.2rem;
+                        color: #555;
+                        font-weight: 600;
+                    ">of building the commons</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes slideInFromTop {
+        from {
+            transform: translateY(-120px) scale(1.2);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        from { 
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes floatIn {
+        from {
+            opacity: 0;
+            transform: translateY(80px) rotateX(10deg);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) rotateX(0deg);
+        }
+    }
+    @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    @keyframes pulseRadial {
+        0% { opacity: 0.2; transform: scale(1); }
+        100% { opacity: 0.1; transform: scale(1.3); }
+    }
+    @keyframes textGlow {
+        0% { text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        100% { text-shadow: 0 4px 30px rgba(255,255,255,0.5); }
+    }
+    @keyframes floatUpDown {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    @keyframes gridMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 50px 50px; }
+    }
+    @keyframes textShine {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+    @keyframes underlinePulse {
+        0% { width: 70px; opacity: 1; }
+        50% { width: 100px; opacity: 0.8; }
+        100% { width: 70px; opacity: 1; }
+    }
+    @keyframes statFloat {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(-15px) rotate(1deg); box-shadow: 0 20px 40px rgba(38, 128, 194, 0.2); }
+    }
+</style>
+
+<script>
+    // Add hover effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // About section hover effects
+        const aboutSections = document.querySelectorAll('.about-section');
+        aboutSections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'translateY(-10px) rotateX(2deg)';
+                section.style.boxShadow = '0 25px 60px rgba(0,0,0,0.15)';
+            });
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'translateY(0) rotateX(0deg)';
+                section.style.boxShadow = '0 15px 40px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // Stat item hover effects
+        const statItems = document.querySelectorAll('.stat-item');
+        statItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.background = 'linear-gradient(135deg, rgba(38, 128, 194, 0.2) 0%, rgba(26, 111, 176, 0.2) 100%)';
+                item.style.transform = 'translateY(-20px) rotate(2deg) scale(1.05)';
+                item.style.boxShadow = '0 30px 60px rgba(38, 128, 194, 0.3)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.background = 'linear-gradient(135deg, rgba(38, 128, 194, 0.1) 0%, rgba(26, 111, 176, 0.1) 100%)';
+                item.style.transform = 'translateY(0) rotate(0deg) scale(1)';
+                item.style.boxShadow = '0 15px 40px rgba(0,0,0,0.1)';
+            });
+        });
+    });
+</script>
+{% endblock %}

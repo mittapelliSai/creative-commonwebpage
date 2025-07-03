@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+
+{% block title %}Creative Commons Licenses{% endblock %}
+
+{% block content %}
+<section class="licenses-hero" style="
+    background: linear-gradient(135deg,rgb(175, 194, 207) 0%, #1a6fb0 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+">
+    <div class="container" style="
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    ">
+        <h1 style="
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.2;
+            animation: fadeInDown 1s ease-out;
+        ">CREATIVE COMMONS LICENSES</h1>
+        <p style="
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+            opacity: 0;
+        ">Our public copyright licenses incorporate a unique and innovative "three-layer" design. Each license begins as a traditional legal tool, in the kind of language and text formats that most lawyers know and love. We call this the Legal Code layer of each license.</p>
+       <a href="{{ url_for('choose_license') }}" class="button" style="
+            display: inline-block;
+            background: white;
+            color: #2680c2;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        ">Choose a License</a>
+    </div>
+    <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+        animation: wave 15s linear infinite;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>  
+      
+    </div>
+    
+</section>
+
+<section class="video-section" style="padding: 80px 0; background:rgb(237, 225, 225);">
+    <div class="container">
+        <div class="video-container" style="
+            max-width: auto;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        ">
+            <div style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: transform 0.5s ease;
+            ">
+                <iframe style="width: 100%;" title="Twenty Years of Creative Commons (in Sixty Seconds)" src="https://player.vimeo.com/video/13590841?api=1&player_id=vimeo-player" frameborder="0" allowfullscreen></iframe>
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                </iframe>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="licenses-list" style="padding: 80px 0;">
+    <div class="container">
+        <h2 style="
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+            
+        ">OUR LICENSES</h2>
+        
+        <div class="license-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        ">
+            {% for license in licenses %}
+            <div class="license-card" style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+                text-align: center;
+                animation: flipInY 1s ease-out {{ loop.index * 0.1 }}s forwards;
+                opacity: 0;
+            ">
+                <img src="{{ url_for('static', filename='images/' + license.icon) }}" alt="{{ license.abbreviation }}" style="
+                    width: 80px;
+                    height: 80px;
+                    margin: 0 auto 20px;
+                    transition: transform 0.3s ease;
+                ">
+                <h3 style="
+                    color: #2680c2;
+                    margin-bottom: 15px;
+                    font-size: 1.8rem;
+                ">{{ license.abbreviation }}</h3>
+                <p style="
+                    color: #555;
+                    margin-bottom: 20px;
+                    line-height: 1.6;
+                ">{{ license.description }}</p>
+                <a href="https://creativecommons.org/chooser/" class="button" style="
+                    display: inline-block;
+                    background: #2680c2;
+                    color: white;
+                    padding: 10px 25px;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                ">Learn More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="license-chooser" style="
+    padding: 80px 0;
+    background: #f5f9fc;
+    text-align: center;
+">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+        ">Not sure which license to choose?</h2>
+        <p style="
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+            opacity: 0;
+        ">Use our license chooser to help you select the right license for your work.</p>
+        <a href="{{ url_for('choose_license') }}" class="button" style="
+            display: inline-block;
+            background: #2680c2;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        ">License Chooser</a>
+    </div>
+</section>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes flipInY {
+        from {
+            transform: perspective(400px) rotateY(90deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(400px) rotateY(0deg);
+            opacity: 1;
+        }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+<script>
+    // Add hover effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // License card hover effects
+        const licenseCards = document.querySelectorAll('.license-card');
+        licenseCards.forEach(card => {
+            const img = card.querySelector('img');
+            const button = card.querySelector('.button');
+            
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+                img.style.transform = 'scale(1.1)';
+                button.style.background = '#1a6fb0';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+                img.style.transform = 'scale(1)';
+                button.style.background = '#2680c2';
+            });
+        });
+
+        // Button hover effects
+        const buttons = document.querySelectorAll('.button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
+{% endblock %}

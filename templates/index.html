@@ -1,0 +1,605 @@
+{% extends "base.html" %}
+
+{% block title %}Better Sharing, Brighter Future{% endblock %}
+
+{% block content %}
+<section class="hero" style="
+    background: linear-gradient(135deg,  rgba(97, 151, 192, 0.8) 30%), 
+                url('https://cdn.elearningindustry.com/wp-content/uploads/2022/09/Shutterstock_289489763.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;">
+">
+    <div class="container" style="
+        position: relative;
+        z-index: 2;
+    ">
+        <h1 style="
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.2;
+            animation: fadeIn 1s ease-out;
+        ">BETTER SHARING, BRIGHTER FUTURE</h1>
+        <p style="
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+            opacity: 0;
+        ">Creative Commons is an international nonprofit organization that empowers people to grow and sustain the thriving commons of shared knowledge and culture we need to address the world's most pressing challenges and create a brighter future for all.</p>
+        <a href="{{ url_for('about') }}" class="button" style="
+            display: inline-block;
+            background: white;
+            color:rgb(20, 67, 101);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        ">LEARN MORE</a>
+    </div>
+    <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff">
+    </div>
+</section>
+
+<section class="video-section" style="padding: 80px 0; background:rgb(237, 225, 225);">
+    <div class="container">
+        <div class="video-container" style="
+            max-width: auto;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        ">
+            <div style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: transform 0.5s ease;
+            ">
+                <iframe style="width: 100%;" title="Twenty Years of Creative Commons (in Sixty Seconds)" src="https://player.vimeo.com/video/777912896?h=016f97b875&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allowfullscreen="allowfullscreen" data-ready="true"></iframe>
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                </iframe>
+                
+            </div>
+            <p style="
+                font-weight: 600;
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+            ">Twenty Years of Creative Commons (in Sixty Seconds) by Ryan Jovell and Glenn Olin</p>
+            <p style="
+                font-size: 0.9rem;
+                color: #666;
+            ">Brown for Creative Commons is licensed via CEE 4.0 and includes adaptations of the multiple open and public domain works. View full licensing and attribution information about all works included in the video on Elixir.</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured-section" style="padding: 80px 0;background: rgba(134, 134, 134, 0.8);">
+    <div class="container">
+        <h2 style="
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+        ">THE NONPROFIT BEHIND THE LICENSES AND TOOLS THE WORLD USES TO SHARE</h2>
+        <p style="
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+            opacity: 0;
+        ">For over 20 years, Creative Commons has supported a global movement built on a belief in the power of open access to knowledge and creativity. From Wikipedia to the Smithsonian, organizations and individuals rely on our work to share billions of historic images, scientific articles, cultural artifacts, educational resources, music, and more!</p>
+        
+        <div class="image-gallery" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            background: rgba(134, 134, 134, 0.8);
+            margin-top: 50px;
+        ">
+            <div class="image-item" style="
+                transition: transform 0.3s ease;
+                animation: fadeInUp 1s ease-out;
+            ">
+                <div style="
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    margin-bottom: 15px;
+                    height: 250px;
+                ">
+                    <img src="https://creativecommons.org/wp-content/uploads/2023/09/Farmer-and-his-brother-making-music.jpg" alt="Farmer and his brother making music" style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.5s ease;
+                    ">
+                    <div style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 15px;
+                        background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+                        display: flex;
+                        justify-content: flex-end;
+                    ">
+                        <div style="
+                            background: white;
+                            color: #2680c2;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        ">CC PDM 1.0</div>
+                    </div>
+                </div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    line-height: 1.5;
+                "><a href= "https://www.loc.gov/pictures/item/2017786790/"> "Farmer and his brother making music"</a> by Russell Lee, here cropped, is marked with <a href= "https://creativecommons.org/publicdomain/mark/1.0/"> CC PDM 1.0 </a> </p>
+            </div>
+            <div class="image-item" style="
+                transition: transform 0.3s ease;
+                animation: fadeInUp 1s ease-out 0.3s forwards;
+                opacity: 0;
+            ">
+                <div style="
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    margin-bottom: 15px;
+                    height: 250px;
+                ">
+                    <img src="https://creativecommons.org/wp-content/uploads/2023/09/Flickr-photowalk-at-the-Creative-Commons-Global-Summit-2019-Lisbon.jpg" alt="Creative Commons Global Summit 2019" style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.5s ease;
+                    ">
+                    <div style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 15px;
+                        background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+                        display: flex;
+                        justify-content: flex-end;
+                    ">
+                        <div style="
+                            background: white;
+                            color: #2680c2;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        ">CC BY 2.0</div>
+                    </div>
+                </div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    line-height: 1.5;
+                "><a href= "https://www.flickr.com/photos/ter-burg/32896267507/"> "Ticket photo: At The Creative Commons Global Summit 2019, Lisbon" </a> by Sebastiaan ter Burg, here cropped, is licensed via <a href= "https://creativecommons.org/licenses/by/2.0/">  CC BY 2.0 </a> </p>
+            </div>
+            <div class="image-item" style="
+                transition: transform 0.3s ease;
+                animation: fadeInUp 1s ease-out 0.6s forwards;
+                opacity: 0;
+            ">
+                <div style="
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    margin-bottom: 15px;
+                    height: 250px;
+                ">
+                    <img src="https://creativecommons.org/wp-content/uploads/2023/09/Novel-Coronavirus-SARS-CoV-2.jpg" alt="Novel coronavirus SARS-coV-2" style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.5s ease;
+                    ">
+                    <div style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 15px;
+                        background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+                        display: flex;
+                        justify-content: flex-end;
+                    ">
+                        <div style="
+                            background: white;
+                            color: #2680c2;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        ">CC BY 2.0</div>
+                    </div>
+                </div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    line-height: 1.5;
+                "> <a href= "https://www.flickr.com/photos/lensonjapan/8724992177"> "Novel Convention 3:965 GMT" </a> by Biblio, here cropped, is licensed via <a href= "https://creativecommons.org/licenses/by/2.0/">  CC BY 2.0 </a> </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="impact-section" style="padding: 80px 0; background: #f5f9fc;">
+    <div class="container">
+        <h2 style="
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+        ">OUR IMPACT</h2>
+        <div class="impact-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        ">
+            <div class="impact-card" style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                animation: flipInX 1s ease-out;
+            ">
+                <div style="
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 20px;
+                    background: #e6f2fa;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <img src="https://pngimg.com/uploads/wikipedia/wikipedia_PNG10.png" alt="Wikipedia Logo" style="width: 30px; height: 30px;">
+                </div>
+                <h3 style="
+                    color: #2680c2;
+                    margin-bottom: 10px;
+                    font-size: 1.5rem;
+                ">WIKIPEDIA</h3>
+               
+                <p style="
+                    color: #555;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                ">Every one of Wikipedia's 55 million plus articles are shared openly and freely using a CC license.</p>
+                <div class="stat" style="
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: #2680c2;
+                    margin: 20px;
+                "> 500+ </div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                ">MILLION ARTICLES</p>
+     
+            </div>
+            <div class="impact-card" style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                animation: flipInX 1s ease-out 0.3s forwards;
+                opacity: 0;
+            ">
+              <div style="
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto 20px;
+                    background: #e6f2fa;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <img src="https://e7.pngegg.com/pngimages/467/401/png-clipart-logo-metropolitan-museum-of-art-product-font-museum.png" alt="Wikipedia Logo" style="width: 50px; height: 50px;">
+                </div>
+                <h3 style="
+                    color: #2680c2;
+                    margin-bottom: 10px;
+                    font-size: 1.5rem;
+                ">METROPOLITAN MUSEUM</h3>
+                <p style="
+                    color: #555;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                ">All images of public domain work in the Met's collection are openly available under Creative Commons Zero (CC0).</p>
+                <div class="stat" style="
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: #2680c2;
+                    margin: 20px 0;
+                ">492,000+</div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                ">IMAGES</p>
+            </div>
+            <div class="impact-card" style="
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                animation: flipInX 1s ease-out 0.6s forwards;
+                opacity: 0;
+            ">
+             <div style="
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto 20px;
+                    background: #e6f2fa;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <img src="https://e7.pngegg.com/pngimages/847/994/png-clipart-khan-academy-logo-thumbnail-tech-companies.png" alt="Wikipedia Logo" style="width: 51px; height: 51px;">
+                </div>
+                <h3 style="
+                    color: #2680c2;
+                    margin-bottom: 10px;
+                    font-size: 1.5rem;
+                ">KHAN ACADEMY</h3>
+                <p style="
+                    color: #555;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                ">Many of the lessons found on Khan Academy are shared under CC BY-SA.available under Creative Commons Zero</p>
+                <div class="stat" style="
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: #2680c2;
+                    margin: 20px 0;
+                ">100,000+</div>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                ">LESSONS</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news-section" style="padding: 80px 0;">
+    <div class="container">
+        <h2 style="
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+            animation: fadeIn 1s ease-out;
+        ">LATEST NEWS</h2>
+        <div class="news-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        ">
+            {% for post in featured_posts %}
+            <div class="news-card" style="
+                background: white;
+                border-radius: 12px;
+                padding: 25px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                animation: zoomIn 1s ease-out {{ loop.index * 0.2 }}s forwards;
+                opacity: 0;
+            ">
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #2680c2;
+                    color: white;
+                    padding: 5px 15px;
+                    border-bottom-left-radius: 12px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                ">{{ post.category }}</div>
+                <h3 style="
+                    margin: 10px 0 15px;
+                    font-size: 1.3rem;
+                    color: #333;
+                ">{{ post.title }}</h3>
+                <p style="
+                    font-size: 0.9rem;
+                    color: #666;
+                    margin-bottom: 15px;
+                ">by {{ post.author }}</p>
+                <p style="
+                    color: #555;
+                    margin-bottom: 20px;
+                    line-height: 1.6;
+                ">{{ post.content[:200] }}...</p>
+                <a href="{{ url_for('blog_post', post_id=post.id) }}" style="
+                    display: inline-flex;
+                    align-items: center;
+                    color: #2680c2;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                ">
+                    Read More
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+                        margin-left: 8px;
+                        transition: transform 0.3s ease;
+                    ">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p style="
+                    font-size: 0.8rem;
+                    color: #999;
+                    margin-top: 15px;
+                ">{{ post.license_info }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('blog') }}" style="
+            display: inline-block;
+            margin-top: 50px;
+            padding: 12px 30px;
+            border: 2px solid #2680c2;
+            color: #2680c2;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        ">View All Posts</a>
+    </div>
+</section>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes flipInX {
+        from {
+            transform: perspective(400px) rotateX(90deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(400px) rotateX(0deg);
+            opacity: 1;
+        }
+    }
+    @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+<script>
+    // Add hover effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Image hover effects
+        const images = document.querySelectorAll('.image-item img');
+        images.forEach(img => {
+            img.parentElement.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.05)';
+            });
+            img.parentElement.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+            });
+        });
+
+        // Card hover effects
+        const cards = document.querySelectorAll('.impact-card, .news-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+            });
+        });
+
+        // Read more arrow animation
+        const readMoreLinks = document.querySelectorAll('.read-more');
+        readMoreLinks.forEach(link => {
+            const arrow = link.querySelector('svg');
+            link.addEventListener('mouseenter', () => {
+                arrow.style.transform = 'translateX(5px)';
+            });
+            link.addEventListener('mouseleave', () => {
+                arrow.style.transform = 'translateX(0)';
+            });
+        });
+    });
+</script>
+{% endblock %}
